@@ -3,10 +3,9 @@ import {Container , Logo ,LogoutBtn} from '../index'
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import authSlice from '../../store/authSlice';
 
 function Header() {
-    const authStatus  = useSelector((state) => state.auth.status)
+    const authStatus  = useSelector(state => state.auth.status)
     const navigate = useNavigate()
 
     const navItems = [
@@ -24,7 +23,7 @@ function Header() {
         {
             name: 'Signup',
             slug: '/signup',
-            active: !authStatus
+            active: !authStatus 
         },
         {
             name: 'All Posts',

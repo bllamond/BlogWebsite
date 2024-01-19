@@ -16,7 +16,7 @@ function Postform({post}) {
     })
 
     const navigate = useNavigate()
-    const userData  = useSelector(state => state.user.userData)
+    const userData  = useSelector((state) => state.auth.userData)
 
     const submit = async(data) => {
         if(post)
@@ -115,10 +115,10 @@ function Postform({post}) {
                     </div>
                 )}
                 <Select
-                    options={["active", "inactive"]}
+                    options={["active", "inactive", "not decided"]}
                     label="Status"
                     className="mb-4"
-                    {...register("status", { required: true })}
+                    {...register("status" , { required: true })}
                 />
                 <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
                     {post ? "Update" : "Submit"}

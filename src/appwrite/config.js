@@ -103,7 +103,6 @@ export class Service{
     {
         try {
             return await this.bucket.createFile(
-
                 conf.appwriteBucketId,
                 ID.unique(),
                 file
@@ -115,23 +114,23 @@ export class Service{
         }
     }
 
-    async deleteFile(fileID){
+    async deleteFile(fileId){
         try {
             await this.bucket.deleteFile(
                 conf.appwriteBucketId,
-                fileID
+                fileId
             )
-                return true
+            return true
         } catch (error) {
             console.log(error)
             return false
         }
     }
 
-    getFilePreview(fileID){
+    getFilePreview(fileId){
         return this.bucket.getFilePreview(
             conf.appwriteBucketId,
-            fileID
+            fileId
         )
     }
 }

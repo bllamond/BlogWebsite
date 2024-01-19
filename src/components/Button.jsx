@@ -3,14 +3,16 @@ import React from 'react';
 function Button({
     children,
     type = 'button',
-    bgcolor = 'bg-blue-600',
+    backgcolor = 'bg-blue-600',
     textcolor = 'text-white',
     className= '',
     ...props
 
 }) {
     return (
-        <button className={`px-4 py-2rounded-lg ${bgcolor} ${textcolor} ${className}`} {...props}> 
+        <button className={`px-4 py-2rounded-lg ${backgcolor} ${textcolor} ${className}`} {...props}
+        onSubmit={console.log("submitted")}
+        > 
             {children}
         </button>
     );
