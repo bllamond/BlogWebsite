@@ -10,7 +10,7 @@ function Button({
 
 }) {
     return (
-        <button className={`px-4 py-2rounded-lg ${backgcolor} ${textcolor} ${className}`} {...props}
+        <button className={`px-4 py-2rounded-lg h-11 ${backgcolor} ${textcolor} ${className}`} {...props}
         onSubmit={console.log("submitted")}
         > 
             {children}

@@ -27,9 +27,9 @@ function App() {
 
   // console.log(import.meta.env.VITE_APPWRITE_URL);
   return !loading ? (
-    <div className='h-screen w-full flex flex-wrap content-between bg-gray-400'>
+    <div className='h-screen w-full flex flex-wrap space-y-96 content-between bg-white'>
       <div className='h-screen w-full block'> 
-        <Header />
+        <Header  />
         <main>
       <Outlet />
         </main>
